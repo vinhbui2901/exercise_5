@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../data/product_model.dart';
@@ -13,8 +14,11 @@ class CartController extends GetxController {
       _products[product] = 1;
       _total += product.price;
     }
-    Get.snackbar('add', 'add item',
-        snackPosition: SnackPosition.BOTTOM, duration: Duration(seconds: 2));
+    Get.snackbar('add Product', 'You have added a product to your cart',
+        backgroundColor: Colors.red,
+        colorText: Colors.white,
+        snackPosition: SnackPosition.BOTTOM,
+        duration: Duration(seconds: 1));
   }
 
   get products => _products;
